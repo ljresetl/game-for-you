@@ -19,20 +19,16 @@ return (
 <Game />
 <aside className={styles.docPanel}>
 <h3 className={styles.docTitle}>Part A — Theory (short)</h3>
-        <p className={styles.docText}>
-✨ Features
-
-🎯 Smooth animations via requestAnimationFrame
-
-🟡 Golden letters = ×2 points
-
-📱 Mobile-first styles using CSS modules
-
-🎮 Three difficulty levels (Easy / Medium / Hard)
-
-⏱ Game timer + score tracking
-
-♻️ Minimal dependencies</p>
+        <p className={styles.docText}></p>
+  <ul className={styles.docList}>
+    <li className={styles.docListItem}>✨ Features</li>
+    <li className={styles.docListItem}>🎯 Smooth animations via requestAnimationFrame</li>
+    <li className={styles.docListItem}>🟡 Golden letters = ×2 points</li>
+    <li className={styles.docListItem}>📱 Mobile-first styles using CSS modules</li>
+    <li className={styles.docListItem}>🎮 Three difficulty levels (Easy / Medium / Hard)</li>
+    <li className={styles.docListItem}>⏱ Game timer + score tracking</li>
+    <li className={styles.docListItem}>♻️ Minimal dependencies</li>
+  </ul>
 </aside>
 </main>
 </div>
