@@ -1,32 +1,23 @@
-# Typing Keyboard Game
+✨ Features
 
-## Overview
+🎯 Smooth animations via requestAnimationFrame
 
-React + TypeScript typing game. Letters fall from top of play area; player clicks letters or types keys to collect them. Session lasts 20s (adjustable via difficulty). Golden letters are rarer and give double points.
+🟡 Golden letters = ×2 points
 
-## How to run (dev)
+📱 Mobile-first styles using CSS modules
 
-1. `npm install`
-2. `npm run dev`
-3. Open the local URL shown by Vite.
+🎮 Three difficulty levels (Easy / Medium / Hard)
 
-## Technical choices
+⏱ Game timer + score tracking
 
-- React + TypeScript
-- Canvas-like animation logic (letters are DOM elements positioned absolutely, updated via rAF for smooth motion)
-- Hooks split: `useFallingLetters`, `useGameTimer`
-- Minimal dependencies (no external game libraries) to keep bundle small
-- Mobile-first styles via CSS modules
+♻️ Minimal dependencies
 
-## Production notes
+🛠 Future Improvements
 
-- Build with `npm run build` (Vite) and serve static files via a CDN-enabled server.
-- Minify and produce source maps; enable HTTP caching for assets.
-- For large populations (100+ objects) consider switching letter rendering to Canvas 2D or WebGL for performance.
-- Add metrics and error logging; consider saving scores via secure API (axios + backend).
+🔊 Sound effects (Howler.js)
 
-## Extensibility
+🏆 Local or online leaderboard (via API + localStorage)
 
-- Add local leaderboard via `localStorage` or remote API.
-- Add sound (Howler.js) for clicks and end-of-game.
-- Move rendering to Canvas/WebGL for high object counts.
+🎨 Canvas/WebGL rendering for large numbers of objects
+
+📊 Game statistics across multiple sessions
