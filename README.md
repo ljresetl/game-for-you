@@ -1,97 +1,115 @@
+<!-- Part A - Theoretical questions -->
+
 1. Describe a way to create multiple games from corresponding sources (code, images, sounds). What tools do you have experience with?
 
-To create multiple games from a shared set of resources:
+- I have never made a game before, but I understand the basic idea. You can create multiple games using code, images, and sounds. You write the code for the game logic, and then add images and sounds for characters, backgrounds, and effects.
 
-Modular architecture: game logic is separated into reusable modules.
+I have some experience with HTML, CSS, and JavaScript, which can be used for simple web games. I have also heard about Unity and Godot, which help organize resources and make games more easily.
 
-Media assets: sprites, images, and audio are stored separately and loaded depending on the game.
+2.  Describe issues related to mobile device’s browsers and mobile development in general. What ways of solving such problems do you know?
 
-Game engine/framework: a common engine (e.g., Phaser.js, PixiJS, Unity) can handle multiple games.
+- I don’t have much experience in mobile development yet, but I know some common problems.
 
-Tools used:
+Different screen sizes and resolutions – a website or game can look different on different phones.
 
-JavaScript (ES6) and TypeScript
+Performance – mobile devices are weaker than computers, so heavy animations or scripts can run slowly.
 
-React for UI
+Browser compatibility – not all features work in all mobile browsers.
 
-Canvas API / WebGL for animations
+Touch and gesture controls – interfaces need to work for fingers, not a mouse.
 
-TexturePacker for sprites
+Possible solutions:
 
-Web Audio API for sounds
+Use responsive design (CSS media queries) so the site or game adapts to different screens.
 
-In our project, we used React + TypeScript, DOM elements for letters with Canvas-like absolute positioning, and CSS modules for styling with minimal dependencies.
+Optimize code and resources to make them run faster on weaker devices.
 
-2. Describe issues related to mobile device’s browsers and mobile development in general. What ways of solving such problems do you know?
+Test on different browsers and devices.
 
-Issues:
+Use libraries or frameworks that already support mobile screens and touch controls.
 
-Browsers differ in support for Canvas, WebGL, and audio APIs.
+3. Describe issues related to code minification and ways of solving them.
 
-Touch controls instead of mouse or keyboard.
+- I don’t have much experience with code minification, but I know some basic problems.
 
-Small screens and various aspect ratios.
+Errors after minification – sometimes the code can stop working because variable names are changed or spaces are removed.
 
-Lower mobile device performance → complex animations may lag.
+Harder to read the code – after minification, the code becomes compact and difficult to understand or debug.
 
-Solutions:
+Possible solutions:
 
-Mobile-first responsive design (CSS Flex/Grid, media queries).
+Check that the program works after minification.
 
-Graphics optimization: sprite sheets, reduce number of DOM elements.
+Use tools like Webpack or Terser that can minify code safely.
 
-Use unified libraries: Howler.js for audio, Pointer events for touch.
-
-Testing on different devices and browsers.
-
-Simplifying animations and FPS for smooth mobile performance.
-
-3. Describe issues related to code minification and ways of solving them
-
-Issues:
-
-Minification can break logic if global variables or incorrect imports are used.
-
-Variable names get obfuscated in production → harder to debug.
-
-Solutions:
-
-Use source maps for production debugging.
-
-Use modern bundlers: Vite, Webpack, Rollup.
-
-Maintain modular code structure.
-
-Linting and testing before minification.
+Keep the original code readable for debugging.
 
 4. Describe approaches to create an animation of 100 falling coins from the top edge of the screen. What pros and cons each approach has?
 
-Approaches:
+- I haven’t made complex animations yet, but I can think of a few ways to create an animation of 100 falling coins:
 
-DOM elements (div/span + CSS/JS):
+Using CSS animations
 
-Easy to integrate with UI and clickable.
+Pros: easy to implement, works in the browser without extra libraries.
 
-Performance drops with 100+ elements, especially on mobile.
+Cons: hard to control each coin individually, may lag with many elements.
 
-Canvas 2D API:
+Using JavaScript + setInterval or requestAnimationFrame
 
-Flexible, precise control over trajectories and physics.
+Pros: more control over the animation, can change speed, trajectory, and other properties of each coin.
 
-Need to manually handle collisions and animation.
+Cons: code is more complex, can be harder to optimize for 100 coins.
 
-WebGL / Three.js:
+Using animation libraries (like GSAP)
 
-GPU acceleration, supports 3D effects and lighting.
+Pros: easy to create smooth and complex animations, well optimized for many elements.
 
-More complex code, longer development time, harder to integrate with DOM UI.
+Cons: need to include an extra library, a bit harder for a beginner.
 
-CSS Keyframes / Transitions:
+5. Describe your experience with performance optimization. Which approaches and tools did you use, if any?
 
-Simple syntax, hardware accelerated.
+- I don’t have much experience with performance optimization yet, but I know some basic approaches.
 
-Less control over motion and interactions.
+Reducing file sizes – for example, minifying code, compressing images and other resources.
 
-In our project, we used DOM elements + absolute positioning via JS, so letters are clickable and scoring is easy to implement.
+Optimizing scripts – using fewer loops or heavy calculations, using requestAnimationFrame for animations instead of setInterval.
+
+Checking performance – using browser tools (like Chrome DevTools) to profile and find problems.
+
+I haven’t used professional optimization libraries yet, but I know they exist and can help make a website or game faster.
+
+<!-- Part B - Practical task -->
+
+🎮 Game Description
+
+Game mechanics: The player must click on falling letters in time to score points. Golden letters give double points but appear less frequently.
+
+Session duration: 20 seconds.
+
+Interface: Minimalist design with a "Start" button to begin the game and a results screen after the session ends.
+
+🛠️ Technical Details
+
+Programming language: TypeScript
+
+Framework: React
+
+Rendering: DOM elements with absolute positioning are used to display falling letters.
+
+Styling: CSS modules for organizing styles.
+
+External dependencies: Minimal, only React and TypeScript.
+
+📊 Features
+
+Score tracking: Shows total points and the number of golden letters caught.
+
+Score formula: total score = points + (goldenLetters \* goldenPrice)
+
+Responsiveness: Adaptive design for various screen sizes.
+
+<!-- Part C - Graphics -->
+
+- I looked at the photo and marked what I don’t like in the image. The word “Winnings” and the actual winnings amount are too far apart, while the word “BET” and the bet amount are too close together.
 
 ![Gameplay Screenshot](./src/assets/images/22.png)
