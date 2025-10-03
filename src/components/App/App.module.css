@@ -35,6 +35,7 @@
 }
 
 .mainGrid {
+  max-width: 411px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
