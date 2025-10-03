@@ -40,19 +40,6 @@
   gap: 16px;
 }
 
-/* плавний перехід */
-@media (min-width: 411px) {
-  .mainGrid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 768px) {
-  .mainGrid {
-    grid-template-columns: 560px 1fr;
-  }
-}
-
 .docList {
   list-style: none; /* прибираємо стандартні буліти */
   padding: 0;
@@ -95,4 +82,17 @@
 .docText {
   color: #d9e9ff;
   font-size: 14px;
+}
+
+/* плавний перехід */
+@media (min-width: 411px) {
+  .mainGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .mainGrid {
+    grid-template-columns: 560px 1fr;
+  }
 }
