@@ -1,3 +1,10 @@
+/* глобально */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .container {
   background: linear-gradient(
     180deg,
@@ -7,18 +14,28 @@
   border-radius: 12px;
   padding: 12px;
   border: 1px solid rgba(255, 255, 255, 0.03);
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
+
+/* Контрол панель */
 .controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
+  flex-wrap: wrap; /* щоб переносилось на мобілці */
   margin-bottom: 8px;
 }
+
 .leftControls {
   display: flex;
   gap: 8px;
   align-items: center;
+  flex-wrap: wrap;
 }
+
 .btnStart {
   background: var(--accent);
   border: none;
@@ -27,7 +44,9 @@
   color: #042033;
   font-weight: 600;
   cursor: pointer;
+  flex-shrink: 1; /* дозволяє стискатися */
 }
+
 .btnStop {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -35,15 +54,18 @@
   padding: 10px 12px;
   border-radius: 8px;
   cursor: pointer;
+  flex-shrink: 1;
 }
+
 .label {
   color: var(--muted);
-  margin-left: 8px;
   font-size: 14px;
   display: flex;
   gap: 6px;
   align-items: center;
+  flex-shrink: 1;
 }
+
 .select {
   background: rgba(255, 255, 255, 0.02);
   border-radius: 6px;
@@ -51,23 +73,60 @@
   color: var(--muted);
   border: 1px solid rgba(255, 255, 255, 0.03);
 }
+
+/* HUD */
 .hud {
   display: flex;
   gap: 12px;
   align-items: center;
   color: var(--muted);
+  flex-wrap: wrap; /* переносить при маленькій ширині */
 }
+
 .hudItem {
   font-weight: 600;
   font-size: 14px;
+  flex-shrink: 1;
 }
 
+/* Ігрова зона */
 .playArea {
   position: relative;
   width: 100%;
-  height: 420px;
+  min-width: 0;
+  height: min(50vw, 420px); /* адаптивна висота, максимум 420px */
   border-radius: 8px;
   overflow: hidden;
   background: linear-gradient(180deg, #021026, #03182a);
   border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Мобілка 390–767 */
+@media (max-width: 767px) {
+  .controls,
+  .hud {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .btnStart,
+  .btnStop,
+  .label {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Планшет 768–1023 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .controls {
+    flex-wrap: nowrap;
+  }
+}
+
+/* Десктоп 1024+ */
+@media (min-width: 1024px) {
+  .controls {
+    flex-wrap: nowrap;
+  }
 }
