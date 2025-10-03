@@ -61,6 +61,10 @@ const Game: React.FC = () => {
   React.useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (!gameStarted) return;
+
+      // Ігноруємо пробіл та непотрібні клавіші
+      if (e.key.length !== 1 || e.key === ' ') return;
+
       const key = e.key.toUpperCase();
       for (let i = letters.length - 1; i >= 0; i--) {
         if (letters[i].char === key) {
@@ -70,6 +74,7 @@ const Game: React.FC = () => {
         }
       }
     };
+
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [gameStarted, letters, handleCollect]);
