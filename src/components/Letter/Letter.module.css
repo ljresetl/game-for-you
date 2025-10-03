@@ -1,0 +1,29 @@
+.letter {
+  position: absolute;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 26px;
+  color: #e6eef6;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: transform 0.12s ease;
+}
+.letter:hover {
+  transform: translate(-50%, -50%) scale(1.12);
+}
+.golden {
+  color: #b67512;
+  text-shadow: 0 0 8px rgba(246, 200, 95, 0.9);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  box-shadow: 0 6px 18px rgba(246, 200, 95, 0.06);
+}
