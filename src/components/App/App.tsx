@@ -18,7 +18,7 @@ return (
 <main className={styles.mainGrid}>
 <Game />
 <aside className={styles.docPanel}>
-<h3 className={styles.docTitle}>Part A — Theory (short)</h3>
+<h3 className={styles.docTitle}>Project Overview (short)</h3>
         <p className={styles.docText}></p>
   <ul className={styles.docList}>
     <li className={styles.docListItem}>✨ Features</li>

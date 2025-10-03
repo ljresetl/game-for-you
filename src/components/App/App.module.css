@@ -2,12 +2,14 @@
   width: 100%;
   max-width: 980px;
 }
+
 .header {
   display: flex;
   gap: 12px;
   align-items: center;
   margin-bottom: 16px;
 }
+
 .logo {
   width: 56px;
   height: 56px;
@@ -20,19 +22,35 @@
   color: #02203a;
   box-shadow: 0 6px 18px rgba(3, 7, 18, 0.6);
 }
+
 .title {
   margin: 0;
   font-size: 18px;
 }
+
 .subtitle {
   margin: 4px 0 0;
   color: var(--muted);
   font-size: 13px;
 }
+
 .mainGrid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
+}
+
+/* плавний перехід */
+@media (min-width: 411px) {
+  .mainGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .mainGrid {
+    grid-template-columns: 560px 1fr;
+  }
 }
 
 .docList {
@@ -63,20 +81,17 @@
   transform: translateX(4px);
 }
 
-@media (min-width: 980px) {
-  .mainGrid {
-    grid-template-columns: 560px 1fr;
-  }
-}
 .docPanel {
   background: rgba(255, 255, 255, 0.01);
   border-radius: 10px;
   padding: 12px;
   border: 1px solid rgba(255, 255, 255, 0.02);
 }
+
 .docTitle {
   margin: 8px 0;
 }
+
 .docText {
   color: #d9e9ff;
   font-size: 14px;
