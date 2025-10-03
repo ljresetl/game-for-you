@@ -45,11 +45,12 @@
 }
 
 .docListItem {
-  background: #f8f9fa;
+  background-color: #f8f9fa;
   padding: 0.6rem 1rem;
   border-radius: 12px;
   font-size: 0.95rem;
   display: flex;
+  color: #3b82f6;
   align-items: center;
   gap: 0.6rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
