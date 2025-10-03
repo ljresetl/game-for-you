@@ -94,4 +94,4 @@ Less control over motion and interactions.
 
 In our project, we used DOM elements + absolute positioning via JS, so letters are clickable and scoring is easy to implement.
 
-![Gameplay Screenshot](assets/images/22.png)
+![Gameplay Screenshot](./src/assets/images/22.png)
